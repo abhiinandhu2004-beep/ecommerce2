@@ -1,0 +1,13 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Solway:wght@300;400;500;700;800&display=swap');
+
+@import "tailwindcss";
+
+.solway{
+      font-family: "Solway", serif;
+
+}
+
+html,body{
+    overflow-x: hidden;
+}
