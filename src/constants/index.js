@@ -12,11 +12,15 @@ import p1 from '../assets/img1.png'
 import p2 from '../assets/img2.png'
 import p3 from '../assets/img3.png'
 import p4 from '../assets/img4.png'
+import p5 from '../assets/img5.png'
+import p6 from '../assets/img6.png'
 
 export const nav = [
   "OFFERS","EARRINGS","DEVOTIONAL","BANGLES","BRACELET",
   "PLATINUM","SOLITAIR","PENDANT","RINGS","NOSE PIN",
   "COUPLE BAND","NECKLACE","NAVARATNA"
+
+
 ];
 
 
@@ -60,4 +64,74 @@ export const features = [
   { id: 2, img:p2, name: "Diamond ring", sku: "I8037", price: "27000" },
   { id: 3, img:p3, name: "Diamond ring", sku: "I8037", price: "27000" },
   { id: 4, img:p4, name: "Diamond ring", sku: "I8037", price: "27000" },
+  
+
+];
+
+
+export const demanded = [
+  {
+    id: 1,
+    icon: p5,
+    title: "Emerald earrings",
+    sku: "18040",
+    price:"20000",
+    oldprice:"22000"
+  },
+  {
+    id: 2,
+    icon: p2,
+    title: "Emerald earrings",
+    sku: "18040",
+    price:"20000",
+    oldprice:"22000"
+  },
+  {
+   id: 3,
+    icon: p3,
+    title: "Silver bracelet",
+    sku: "18039",
+    price:"8000",
+    oldprice:"9500"
+  },
+  {
+    id: 4,
+    icon: p6,
+    title: "Emerald earrings",
+    sku: "18040",
+    price:"20000",
+    oldprice:"22000"
+  },
+  {
+    id: 5,
+    icon: p5,
+    title: "Emerald earrings",
+    sku: "18040",
+    price:"20000",
+    oldprice:"22000"
+  },
+  {
+    id: 6,
+    icon: p3,
+    title: "Emerald earrings",
+    sku: "18040",
+    price:"20000",
+    oldprice:"22000"
+  },
+  {
+    id: 7,
+    icon: p2,
+    title: "Emerald earrings",
+    sku: "18040",
+    price:"20000",
+    oldprice:"22000"
+  },
+  {
+    id: 8,
+    icon: p3,
+    title: "Emerald earrings",
+    sku: "18040",
+    price:"20000",
+    oldprice:"22000"
+  }
 ];
