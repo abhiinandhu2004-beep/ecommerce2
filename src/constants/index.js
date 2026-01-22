@@ -15,6 +15,11 @@ import p4 from '../assets/img4.png'
 import p5 from '../assets/img5.png'
 import p6 from '../assets/img6.png'
 
+import googlepay from '../assets/gpay.svg'
+import phonepe from '../assets/ppay.svg'
+import paytm from '../assets/ptym.svg'
+import card from '../assets/credit.svg'
+
 export const nav = [
   "OFFERS","EARRINGS","DEVOTIONAL","BANGLES","BRACELET",
   "PLATINUM","SOLITAIR","PENDANT","RINGS","NOSE PIN",
@@ -60,13 +65,16 @@ export const features = [
     ]
 
   export  const products = [
-  { id: 1, img:p1, name: "Diamond ring", sku: "I8037", price: "27000" },
-  { id: 2, img:p2, name: "Diamond ring", sku: "I8037", price: "27000" },
-  { id: 3, img:p3, name: "Diamond ring", sku: "I8037", price: "27000" },
-  { id: 4, img:p4, name: "Diamond ring", sku: "I8037", price: "27000" },
-  
-
-];
+  { id: 1, img: p1, name: "Celeste Halo Diamond Ring", sku: "I8037", price: "27000",oldprice: "AED 29500" },
+  { id: 2, img: p2, name: "Aurora Bloom Diamond Ring", sku: "I8038", price: "27000",oldprice: "AED 29500" },
+  { id: 3, img: p3, name: "Eternal Grace Solitaire Ring", sku: "I8039", price: "27000",oldprice: "AED 29500" },
+  { id: 4, img: p4, name: "Luna Radiance Diamond Ring", sku: "I8040", price: "27000",oldprice: "AED 29500" },
+  { id: 5, img: p1, name: "Royal Embrace Diamond Ring", sku: "I8041", price: "27000",oldprice: "AED 29500" },
+  { id: 6, img: p3, name: "Velora Classic Diamond Ring", sku: "I8042", price: "27000",oldprice:"AED 29500" },
+  { id: 7, img: p4, name: "Serene Promise Diamond Ring", sku: "I8043", price: "27000",oldprice:"AED 29500" },
+  { id: 8, img: p2, name: "Ophelia Spark Diamond Ring", sku: "I8044", price: "27000",oldprice:"AED 29500" },
+]
+;
 
 
 export const demanded = [
@@ -135,3 +143,34 @@ export const demanded = [
     oldprice:"22000"
   }
 ];
+
+
+export const productDetails = [
+  { label: "Product ID", value: "SKU 1245" },
+  { label: "Dimension", value: "9 – 15.6 mm" },
+  { label: "Gold & KT", value: "18 KT Yellow Gold" },
+  { label: "Gold Weight", value: "12.460 GM" },
+  { label: "Diamond Weight", value: "0.180 CT" },
+  { label: "Diamond", value: "SII J" },
+];
+
+
+ export const payments = [
+    { id: "gpay", label: "Google Pay", icon: googlepay },
+    { id: "phonepe", label: "PhonePe", icon: phonepe },
+    { id: "paytm", label: "Paytm", icon: paytm },
+    { id: "card", label: "Debit / Credit card", icon: card },
+  ];
+
+
+
+
+
+export const orders = products.map((product) => ({
+  id: product.id,
+  productname: product.name,
+  date: new Date().toDateString(),
+  username: "Abhinand",      
+  total: product.price,
+  discount: "Promo applied",
+}));

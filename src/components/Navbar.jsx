@@ -28,7 +28,7 @@ const Navbar = () => {
         <img
           src={Logo}
           alt="logo"
-          className="w-45 lg:w-40 h-10 mb- lg:mb-0 px-10 lg:px-0"
+          className="w-45 lg:w-40 h-13 mb- lg:mb-0 px-10 lg:px-0"
           onClick={() => navigate('/')}
         />
 

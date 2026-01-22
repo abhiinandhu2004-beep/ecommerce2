@@ -1,27 +1,32 @@
-import {Routes, Route } from "react-router-dom";
-import Layout from './components/Layout'
+import { Routes, Route, Navigate } from "react-router-dom";
+import Layout from "./components/Layout";
 import Home from "./components/Home";
 import Offers from "./components/Offers";
 import Wishlist from "./components/Wishlist";
 import Cart from "./components/Cart";
 import Buynow from "./components/Buynow";
+import Orderhistory from "./components/Orderhistory";
+import Checkout from "./components/Checkout";
+
 
 const App = () => {
   return (
-    
-      <Routes>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/offers" element={<Offers />} />
+        <Route path="/wish" element={<Wishlist />} />
+        <Route path="/cart" element={<Cart />} />
 
-        {/* Layout route */}
-        <Route element={<Layout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/offers" element={<Offers />} />
-          <Route path="/wish" element={<Wishlist />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/buynow" element={<Buynow/>}/>
-        </Route> 
+        {/* Product details */}
+        <Route path="/buynow/:id" element={<Buynow />} />
 
-      </Routes>
-    
+        {/* Fallback for invalid buynow */}
+        <Route path="/buynow" element={<Navigate to="/" replace />} />
+        <Route path="/checkout" element={<Checkout/>}/>
+        <Route path="/order" element={<Orderhistory/>}/>
+      </Route>
+    </Routes>
   );
 };
 

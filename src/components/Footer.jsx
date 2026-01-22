@@ -7,14 +7,15 @@ const Footer = () => {
     return (
         <>
          <div className='p-5'>
-               <div className='flex flex-col w-full max-w-7xl mx-auto bg-[#010F17] h-101  items-center justify-center text-white rounded-2xl p-10 border border-[#DBF227]'>
+               <div className='flex flex-col w-full max-w-7xl mx-auto bg-[#010F17] h-101 
+                items-center justify-center text-white rounded-2xl p-10 border border-[#DBF227]'>
                 <p className='text-lg lg:text-4xl text-[#DBF227] poppins font-bold py-5'>Download Our Mobile App</p>
                 <p className='poppins text-xs lg:text-lg text-white'> Get the top E-commerce app on your phone! We’ve got you covered with a super </p>
                 <p className='poppins text-xs lg:text-lg text-white mb-8'> user-friendly experience and tons of events to check out. Dive in and explore!</p>
 
-                <div className='flex gap-5'>
-                    <img src={image1} className='w-43.75 h-13' />
-                    <img src={image2} className='w-43.75 h-13' />
+                <div className='flex lg:flex-row flex-col gap-5'>
+                    <img src={image1} className='lg:w-43.75 lg:h-13 w-30 h-10 ' />
+                    <img src={image2} className='lg:w-43.75 lg:h-13 w-30 h-10' />
                 </div>
             </div>
          </div>

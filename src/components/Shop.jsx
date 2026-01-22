@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom"
 
 function Shop() {
 
-    const { wishlist, toggleWishlist, toggleCart, cart } = useWishlist();
+    const { wishlist, toggleWishlist, toggleCart, cart, handleCheckout } = useWishlist();
     const navigate = useNavigate();
 
     return (
@@ -68,16 +68,17 @@ function Shop() {
 
 
             <div className=" py-12">
-                <div className="max-w-7xl mx-auto px-6">
+                <div className="max-w-7xl mx-auto px-6 ">
 
                     <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 ">
                         {products.map((item) => (
                             <div
                                 key={item.id}
                                 className="relative  bg-[#0b1a1f] p-4 shadow-lg hover:scale-105 
-                                transition-transform duration-300 hover:shadow-2xl rounded-2xl"
-                                onClick={() => navigate('/buynow')}
-                            >
+                                transition-transform duration-300 hover:shadow-2xl rounded-2xl overflow-hidden"
+                                onClick={() => handleCheckout(item.id)}>
+
+                            
                                 {/* Wishlist icon */}
                                 {/* <button className="absolute top-4 right-4 text-white/70 hover:text-[#DBF227]">
                                     <Heart size={18} />
@@ -90,7 +91,7 @@ function Shop() {
                                     <img
                                         src={item.img}
                                         alt={item.name}
-                                        className="w-35 h-35 object-contain"
+                                        className="w-45 h-45 object-contain"
                                     />
 
                                 </div>
@@ -114,7 +115,10 @@ function Shop() {
                                 {/* Actions */}
                                 <div className="flex items-center gap-2">
                                     <button className="flex-1 bg-[#DBF227] text-black text-xs font-semibold py-2 rounded-md hover:opacity-90 relative z-20"
-                                        onClick={() => toggleCart(item)}>
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            toggleCart(item);
+                                        }}>
                                         ADD TO CART
                                     </button>
                                     <button
@@ -198,7 +202,7 @@ function Shop() {
 
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 
